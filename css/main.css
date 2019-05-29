@@ -1,0 +1,313 @@
+
+* {
+  box-sizing: border-box; }
+
+/* MENU */
+
+.menu{
+  width: 100%;
+  height: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.menuu ul{
+  list-style: none;
+  position: relative;
+  float: right;
+}
+
+.menuu  li{
+  width: 150px;
+  float: left;
+}
+
+.menuu a{
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.menuu ul ul{
+  position: absolute;
+  visibility: hidden;
+}
+
+label[for="bt_menu"]{
+  padding: 5px;
+  color: #fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+
+#bt_menu{
+  display: none;
+}
+
+
+
+body {
+  background: #696969;
+  color: #000;
+  height: 100%;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 1.5; }
+  body#bg-img {
+    background: url("../images/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+   }
+    body#bg-img:after {
+      content: '';
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(105, 105, 105, 0.9); }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 6rem; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem; }
+
+
+    h1#teste{
+      font-size: 6rem;
+      padding-top: 25px;
+    }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+header {
+  position: absolute;
+  z-index: 2;
+  width: 100%; }
+
+.text-secondary {
+  color: #fff;
+  text-align: justify; }
+
+
+main#home{
+ text-align: center;
+}
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px);
+}
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      padding: 0.4rem;
+      opacity: 0.3; }
+      main .icons a:hover {
+        opacity: 1;
+        color: #fff;
+        transition: all 0.5s ease-out; }
+    main#home h1 {
+      margin-top: 20vh; }
+
+
+.about-info {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: 'bioimage bio'
+ 'job1 job2'
+ 'job3 job4';
+  grid-template-columns: 1fr 1fr;
+}
+
+  .about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 10%;
+    border: #fff 3px solid; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .about-info .job-1 {
+    grid-area: job1; }
+  .about-info .job-2 {
+    grid-area: job2; }
+  .about-info .job-3 {
+    grid-area: job3; }
+  .about-info .job-4 {
+    grid-area: job4; }
+  .about-info .job {
+    background: #767676;
+    padding: 0.5rem;
+    border-bottom: #fff 5px solid; }
+
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+grid-template-columns: 1fr 1fr; }
+  .projects img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #fff;
+      transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      color: #000; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #fff;
+    color: #000; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #b6b6b6;
+  color: #fff; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem 2rem;
+  background: #505050;
+  color: #fff;
+  height: 100px; }
+
+  
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+
+@media screen and (max-width: 800px) { 
+  
+  main#home h1{
+    margin-top: 7vh;
+  }
+
+  label[for="bt_menu"]:hover{
+    background-color: #696969;
+  }
+
+  label[for="bt_menu"]{
+    display: block;
+  }
+
+  #bt_menu:checked ~ .menuu{
+    margin-left: 0;
+  }
+
+  .menuu{
+    margin-top: 5px;
+    margin-left: -140%;
+    transition: all .4s;
+  }
+  
+
+  .menuu li{
+    width: 100%;
+    float: none;
+  }
+
+  .menuu ul{
+    float: none;
+  }
+
+  .menuu ul ul{
+    position: static;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .4s;
+  }
+  .menuu ul lu:hover ul{
+    height: auto;
+    max-height: 200px;
+  }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  grid-template-columns: repeat(3, 1fr); }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+  .portrait {
+    background: url("../images/retratopequeno.jpg"); }
+  .about-info {
+    grid-template-areas: 'bioimage'
+ 'bio'
+ 'job1'
+ 'job2'
+ 'job3'
+ 'job4';
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); }
+  }
+
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; }
+  }
